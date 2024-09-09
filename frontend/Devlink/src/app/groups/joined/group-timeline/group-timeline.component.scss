@@ -1,0 +1,25 @@
+.group-timeline {
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .post {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .post:last-child {
+    border-bottom: none;
+  }
+  
+  p {
+    margin: 0.5rem 0;
+  }
+  

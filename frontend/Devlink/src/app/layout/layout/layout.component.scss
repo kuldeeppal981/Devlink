@@ -1,0 +1,17 @@
+.layout {
+    display: flex;
+    height: 100vh;
+  
+    .main-content {
+      flex-grow: 1;
+      // padding: 20px;
+      background-color: #f5f6fa;
+    }
+  
+    .right-panel {
+      width: 300px;
+      background-color: #e9ecef;
+      padding: 20px;
+    }
+  }
+  

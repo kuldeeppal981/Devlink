@@ -1,0 +1,13 @@
+<div class="create-group">
+    <h2>Create a New Group</h2>
+    <form (ngSubmit)="createGroup()">
+      <label for="groupName">Group Name</label>
+      <input id="groupName" type="text" [(ngModel)]="groupName" name="groupName" required />
+  
+      <label for="groupDescription">Description</label>
+      <textarea id="groupDescription" [(ngModel)]="groupDescription" name="groupDescription"></textarea>
+  
+      <button type="submit">Create Group</button>
+    </form>
+  </div>
+  

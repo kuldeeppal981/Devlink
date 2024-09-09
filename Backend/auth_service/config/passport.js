@@ -14,7 +14,7 @@ passport.use(new GoogleStrategy({
       user = new User({
         name: profile._json.name,
         email: profile._json.email,
-        password: '', // No password needed for social login
+        password: '', 
       });
       await user.save();
     }
@@ -36,7 +36,7 @@ passport.use(new LinkedInStrategy({
       user = new User({
         name: profile._json.firstName.localized.en_US + ' ' + profile._json.lastName.localized.en_US,
         email: profile._json.emailAddress,
-        password: '', // No password needed for social login
+        password: '', 
       });
       await user.save();
     }

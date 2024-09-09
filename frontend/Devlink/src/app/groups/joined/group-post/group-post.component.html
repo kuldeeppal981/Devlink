@@ -1,0 +1,10 @@
+<div class="group-post">
+    <h2>Group Posts</h2>
+    <ul>
+      <li *ngFor="let post of posts">
+        <p><strong>{{ post.author }}:</strong> {{ post.content }}</p>
+        <p><small>{{ post.timestamp }}</small></p>
+      </li>
+    </ul>
+  </div>
+  

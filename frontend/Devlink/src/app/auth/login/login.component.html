@@ -1,34 +1,60 @@
-
-<div class="container" id="container">
+<div class="login-container" id="container" [ngClass]="{'right-panel-active': isRightPanelActive }" >
 	<div class="form-container sign-up-container">
-		<app-social-login></app-social-login>
+		<form [formGroup]="signupForm" (ngSubmit)="onSignUp()">
+			<h1>Create Account</h1>
+			<div class="social-container">
+			  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+			  <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+			  <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+		  
+			<input formControlName="name" type="text" placeholder="Name" />
+			<div *ngIf="signupForm.controls['name'].invalid && signupForm.controls['name'].touched">
+			  Name is required
+			</div>
+		  
+			<input formControlName="email" type="email" placeholder="Email" />
+			<div *ngIf="signupForm.controls['email'].invalid && signupForm.controls['email'].touched">
+			  Valid email is required
+			</div>
+		  
+			<input formControlName="password" type="password" placeholder="Password" />
+			<div *ngIf="signupForm.controls['password'].invalid && signupForm.controls['password'].touched">
+			  Password must be at least 6 characters long
+			</div>
+		  
+			<button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+		  </form>
+		  
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
 			<h1>Sign in</h1>
 			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+			  <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+			  <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input formControlName="email" type="email" placeholder="Email" />
+			<input formControlName="password" type="password" placeholder="Password" />
 			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
-		</form>
+			<button type="submit" [disabled]="signInForm.invalid">Sign In</button>
+		  </form>
+		  
 	</div>
 	<div class="overlay-container">
-		<div class="overlay">
+		<div class="overlay-signup">
 			<div class="overlay-panel overlay-left">
 				<h1>Welcome Back!</h1>
 				<p>To keep connected with us please login with your personal info</p>
-				<button class="ghost" id="signIn">Sign In</button>
+				<button class="ghost" id="signIn" (click)="onSignInClick()">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
 				<h1>Hello, Friend!</h1>
 				<p>Enter your personal details and start journey with us</p>
-				<button class="ghost" id="signUp">Sign Up</button>
+				<button class="ghost" id="signUp" (click)="onSignUpClick()">Sign Up</button>
 			</div>
 		</div>
 	</div>

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const username = encodeURIComponent('kuldeep45');
-const password = encodeURIComponent('Smart@12');
-const cluster = 'cluster.gz9ht.mongodb.net';
+const username = encodeURIComponent('kuldeeppal981');
+const password = encodeURIComponent('gSatId0FTIXFPmWW');
+const cluster = 'devlink.1boiy.mongodb.net';
 const database = 'auth-service';
 
-const mongoURI = `mongodb+srv://${username}:${password}@${cluster}/?retryWrites=true&w=majority`;
+const mongoURI = `mongodb+srv://${username}:${password}@${cluster}/?retryWrites=true&w=majority&appName=devlink`;
 
 const connectDB = async () => {
   try {

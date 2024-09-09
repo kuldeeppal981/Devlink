@@ -1,0 +1,9 @@
+<div class="joined-groups">
+    <h2>Groups You Have Joined</h2>
+    <ul>
+      <li *ngFor="let group of joinedGroups" (click)="viewGroup(group)">
+        {{ group.name }}
+      </li>
+    </ul>
+  </div>
+  
