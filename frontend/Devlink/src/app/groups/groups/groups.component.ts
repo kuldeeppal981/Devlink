@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-groups',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrl: './groups.component.scss'
 })
 export class GroupsComponent {
+  
 
+
+
+  
+
+  ngOnInit() {
+   
+  }
+
+ 
+
+
+
+
+ 
 }

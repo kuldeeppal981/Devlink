@@ -6,12 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './group-info.component.scss'
 })
 export class GroupInfoComponent {
-  @Input() group: any = {
-    name: 'Group Name',
-    description: 'Group Description',
-    creationDate: new Date()
-  };
-
+  joinedGroups: any[] = [];  
+  
   ngOnInit(): void {
   }
 }

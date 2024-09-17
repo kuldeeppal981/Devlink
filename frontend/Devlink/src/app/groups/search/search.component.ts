@@ -7,22 +7,75 @@ import { Component } from '@angular/core';
   styleUrl: './search.component.scss'
 })
 export class SearchComponent {
-  searchTerm: string = '';
+
   groups = [
-    { id: 1, name: 'Angular Enthusiasts' },
-    { id: 2, name: 'React Developers' },
-    { id: 3, name: 'Vue.js Lovers' }
+    {
+      name: 'Angular Enthusiasts',
+      memberCount: 1250,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    },
+    {
+      name: 'Frontend Developers',
+      memberCount: 3450,
+      logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg',
+      bannerUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg'
+    }
+
   ];
-  filteredGroups = this.groups;
-
-  searchGroups(): void {
-    this.filteredGroups = this.groups.filter(group =>
-      group.name.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
+  joinGroup() {
+    // Handle the logic when a user clicks the "Join" button
+    // alert(`You have joined the group: ${this.group.name}`);
   }
 
-  selectGroup(group: any): void {
-    console.log('Selected Group:', group);
-    // Logic to navigate to selected group's details
-  }
+ 
+ 
 }

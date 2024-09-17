@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -8,6 +9,15 @@ import { Component } from '@angular/core';
 export class CreateComponent {
   groupName: string = '';
   groupDescription: string = '';
+  createGroupForm: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.createGroupForm = this.fb.group({
+      name: ['', Validators.required],
+      about: ['', Validators.required],
+      type: ['', Validators.required]
+    });
+  }
+  
 
   createGroup(): void {
     const newGroup = {
@@ -18,5 +28,11 @@ export class CreateComponent {
 
     console.log('Creating Group:', newGroup);
     // Logic to create a new group
+  }
+  onCreateGroup() {
+    if (this.createGroupForm.valid) {
+      const newGroup = this.createGroupForm.value;
+      // Call your service to create the group
+    }
   }
 }

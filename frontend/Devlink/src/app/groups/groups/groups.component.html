@@ -1,9 +1,16 @@
-<div class="groups-container">
-    <nav>
-      <a routerLink="search" routerLinkActive="active">Search</a>
-      <a routerLink="joined" routerLinkActive="active">Joined Groups</a>
-      <a routerLink="create" routerLinkActive="active">Create Group</a>
-    </nav>
-    <!-- <router-outlet></router-outlet> -->
-  </div>
-  
+<mat-tab-group>
+  <!-- Joined Groups Tab -->
+  <mat-tab label="Joined Groups">
+    <app-group-info></app-group-info>
+  </mat-tab>
+
+  <!-- Create Group Tab -->
+  <mat-tab label="Create Group">
+    <app-create></app-create>
+  </mat-tab>
+
+  <!-- Discover Groups Tab -->
+  <mat-tab label="Discover Groups">
+    <app-search></app-search>
+  </mat-tab>
+</mat-tab-group>

@@ -1,1 +1,27 @@
-<p>search works!</p>
+<div style="display: flex;">
+
+  <mat-card class="group-card" *ngFor="let group of groups">
+    <div class="group-card-horizontal">
+      <!-- Group Logo -->
+      <div class="group-logo">
+        <img [src]="group.logoUrl" alt="{{ group.name }} logo" />
+      </div>
+  
+      <!-- Group Information -->
+      <div class="group-info">
+        <mat-card-title>{{ group.name }}</mat-card-title>
+        <mat-card-subtitle>{{ group.memberCount }} members</mat-card-subtitle>
+      </div>
+  
+      <!-- Join Button -->
+      <div class="group-actions">
+        <button mat-button color="primary" (click)="joinGroup()">Join</button>
+      </div>
+    </div>
+  
+    <!-- Group Banner (as a background) -->
+    <div class="group-banner" [ngStyle]="{'background-image': 'url(' + group.bannerUrl + ')'}"></div>
+  </mat-card>
+</div>
+
+

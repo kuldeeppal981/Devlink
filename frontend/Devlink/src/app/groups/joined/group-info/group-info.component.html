@@ -1,6 +1,10 @@
-<div class="group-info">
-    <h2>{{ group.name }}</h2>
-    <p><strong>Description:</strong> {{ group.description }}</p>
-    <p><strong>Created on:</strong> {{ group.creationDate }}</p>
-  </div>
-  
+<div *ngIf="joinedGroups.length > 0; else noJoinedGroups">
+  <mat-list>
+    <mat-list-item *ngFor="let group of joinedGroups">
+      {{ group.name }}
+    </mat-list-item>
+  </mat-list>
+</div>
+<ng-template #noJoinedGroups>
+  <p>You haven't joined any groups yet.</p>
+</ng-template>

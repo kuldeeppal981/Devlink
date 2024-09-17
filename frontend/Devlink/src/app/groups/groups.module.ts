@@ -10,11 +10,14 @@ import { JoinedComponent } from './joined/joined.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../shared/material/material.module';
+import { GroupsComponent } from './groups/groups.component';
 
 
 
 @NgModule({
   declarations: [
+    GroupsComponent,
     SearchComponent,
     JoinedComponent,
     GroupInfoComponent,
@@ -26,9 +29,11 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     GroupsRoutingModule,
+    MaterialModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule
+    
   ]
 })
 export class GroupsModule { }
