@@ -2,14 +2,14 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    background-color: #181d2f;
+    background-color: $app-container;
 }
 
 .main-container {
     // padding: 20px;
     flex-grow: 1;
     overflow: auto;
-    background-color: #24273b;
+    background-color: $app-container;
 }
 
 .timeline {

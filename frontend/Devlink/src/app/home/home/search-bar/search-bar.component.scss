@@ -6,7 +6,7 @@ $side-title: #5c5e6e;
 $button: #8f98a9;
 .search-bar {
     height: 60px;
-    background-color: $bg-color;
+    background-color: $app-container;
     z-index: 3;
     position: relative;
     input {

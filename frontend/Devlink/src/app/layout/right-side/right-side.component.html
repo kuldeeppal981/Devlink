@@ -11,10 +11,15 @@
         <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
       </svg>
     </button>
-    <span class="account-user">Quan Ha
+    <span class="account-user" (click)="toggleDropdown()">Quan Ha
       <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg" alt="" class="account-profile" alt="">
-      <span>▼</span>
+      <span >▼</span>
     </span>
+    <div class="dropdown" *ngIf="isDropdownOpen">
+      <ul>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
   </div>
   <div class="side-wrapper stories">
     <div class="side-title">STORIES</div>

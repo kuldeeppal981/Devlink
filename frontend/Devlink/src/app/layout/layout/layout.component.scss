@@ -1,17 +1,29 @@
 .layout {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh; // Full height of the viewport
   
-    .main-content {
-      flex-grow: 1;
-      // padding: 20px;
-      background-color: #f5f6fa;
-    }
-  
-    .right-panel {
-      width: 300px;
-      background-color: #e9ecef;
-      padding: 20px;
-    }
+  // Left panel
+  .left-panel {
+    width: 300px; // Fixed width
+    background-color: #e9ecef;
+    padding: 20px;
+    overflow-y: auto; // Enables scrolling when content overflows
+    flex-shrink: 0; // Prevents the panel from shrinking
   }
-  
+
+  // Main content section
+  .main-content {
+    flex-grow: 1; // Expands to take up remaining space
+    background-color: #f5f6fa;
+    overflow-y: auto; // Enables scrolling if content overflows
+  }
+
+  // Right panel
+  .right-panel {
+    width: 300px; // Fixed width
+    background-color: #e9ecef;
+    padding: 20px;
+    overflow-y: auto; // Enables scrolling when content overflows
+    flex-shrink: 0; // Prevents the panel from shrinking
+  }
+}

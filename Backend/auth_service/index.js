@@ -7,6 +7,8 @@ const redisClient = require('./config/redis');
 const authRoutes = require('./routes/authRoutes');
 const errorHandler = require('./middleware/errorMiddleware');
 const rateLimiter = require('./middleware/rateLimitMiddleware');
+const responses = require('express-responses');
+const responseFormatter = require('./middleware/responseFormatter');
 
 
 dotenv.config();
@@ -19,6 +21,8 @@ app.use(cors({
     credentials: true
   }));
 app.use(express.json());
+app.use(responses());
+app.use(responseFormatter);
 
 
 app.use('/api/auth', rateLimiter);

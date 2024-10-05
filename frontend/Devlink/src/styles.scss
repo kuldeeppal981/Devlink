@@ -1,11 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Source+Sans+Pro:300,400,600,700&display=swap");
 
-$bg-color: #151728;
-$border-color: #272a3a;
-$title-font: "DM Sans", sans-serif;
-$body-font: "Source Sans Pro", sans-serif;
-$side-title: #5c5e6e;
-$button: #8f98a9;
+@import './styles/variables';
 
 * {
  outline: none;
@@ -19,8 +14,8 @@ html {
 
 body {
  font-family: $body-font;
- background-color: #373e57;
- color: #ccc8db;
+ background-color: $app-container;
+
 }
 
 // .container {
@@ -38,7 +33,7 @@ body {
  display: flex;
  flex-direction: column;
  transition: 0.3s;
- background-color: $bg-color;
+ background-color: $background-color;
  overflow: auto;
  flex-shrink: 0;
  @media screen and (max-width: 930px) {
@@ -101,7 +96,7 @@ body {
  flex-grow: 1;
  display: flex;
  flex-direction: column;
- background-color: #181d2f;
+ background-color:$background-color;
 }
 
 .logo {
@@ -150,7 +145,7 @@ body {
   display: flex;
   align-items: center;
   &:hover {
-   color: #fff;
+   color: $link-color-hover;
   }
   &:not(:last-child) {
    margin-bottom: 20px;
@@ -217,7 +212,7 @@ body {
 
 .search-bar {
  height: 60px;
- background-color: $bg-color;
+ background-color: $search-area-bg;
  z-index: 3;
  position: relative;
  input {
@@ -244,7 +239,7 @@ body {
 //  padding: 20px;
  flex-grow: 1;
  overflow: auto;
- background-color: #24273b;
+ background-color: $background-color;
 }
 
 .profile {
@@ -300,8 +295,8 @@ body {
 
  &.active,
  &:hover {
-  color: #fff;
-  background-color: #1b1d2e;
+  color: $link-color-hover;
+  background-color: $background-color;
   border-bottom: 3px solid #1488fa;
  }
 }
@@ -515,8 +510,8 @@ body {
   border-radius: 20px;
   &.active,
   &:hover {
-   background-color: #2e2e40;
-   color: #fff;
+   background-color: $background-color;
+   color: $link-color-hover;
   }
  }
  &-item + &-item {
@@ -668,7 +663,7 @@ body {
  align-items: center;
  font-weight: 600;
  &:hover {
-  color: #fff;
+  color: $link-color-hover
  }
  svg {
   width: 16px;
@@ -819,7 +814,7 @@ body {
  height: 100%;
  border: 0;
  width: 52px;
- background-color: #1e2031;
+ background-color: $background-color;
  border-left: 1px solid $border-color;
  color: #fff;
  display: none;

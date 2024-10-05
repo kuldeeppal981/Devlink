@@ -1,11 +1,12 @@
 <div class="layout">
-    <!-- Left Side Menu -->
-    <app-left-side></app-left-side>
-  
-    <div class="main-content">
-      <router-outlet></router-outlet> 
-    </div>
+  <!-- Left Side Menu -->
+  <app-left-side class="left-panel"></app-left-side>
 
-    <app-right-side></app-right-side>
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <router-outlet></router-outlet> 
   </div>
-  
+
+  <!-- Right Side Panel -->
+  <app-right-side class="right-panel"></app-right-side>
+</div>

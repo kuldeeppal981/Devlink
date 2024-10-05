@@ -36,8 +36,8 @@ export class LoginComponent {
           (response) => {
             console.log('Sign in successful', response);
             this.router.navigate(['/devlink/home']);
-            localStorage.setItem('token', response.token);
-            localStorage.setItem('userDetails', JSON.stringify(response.user));
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('userDetails', JSON.stringify(response.data.user));
           },
           (error) => {
             console.error('Sign in failed', error);

@@ -19,7 +19,7 @@ $title-font: "DM Sans", sans-serif;
      border-radius: 20px;
      &.active,
      &:hover {
-      background-color: #2e2e40;
+      background-color: $background-color;
       color: #fff;
      }
     }

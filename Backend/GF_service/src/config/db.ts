@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const username = encodeURIComponent('kuldeeppal981');
-const password = encodeURIComponent('gSatId0FTIXFPmWW');
+const username = encodeURIComponent('');
+const password = encodeURIComponent('');
 const cluster = 'devlink.1boiy.mongodb.net';
 const database = 'auth-service';
 
